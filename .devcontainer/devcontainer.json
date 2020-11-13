@@ -1,7 +1,7 @@
 {
 	"$schema": "https://raw.githubusercontent.com/microsoft/vscode/master/extensions/configuration-editing/schemas/devContainer.schema.json",
 	"name": "LiveShare Extension in GitHub Codespaces",
-	"image": "ghcr.io/vsls-contrib/liveshare-in-codespaces:main",
+	"dockerFile": "Dockerfile",
 	"settings": {
 		"terminal.integrated.shell.linux": "/bin/bash"
 	},
