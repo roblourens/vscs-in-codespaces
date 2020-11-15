@@ -3,9 +3,9 @@ FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
 # Install .NET Core SDK
 ENV DOTNET_SDK_DOWNLOAD_URL https://dotnetcli.blob.core.windows.net/dotnet/Sdk/3.1.402/dotnet-sdk-3.1.402-linux-x64.tar.gz
 
-RUN curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz \
-    && tar -zxf dotnet.tar.gz -C /home/codespace/.dotnet \
-    && rm dotnet.tar.gz
+RUN sudo curl -SL $DOTNET_SDK_DOWNLOAD_URL --output dotnet.tar.gz \
+    && sudo tar -zxf dotnet.tar.gz -C /home/codespace/.dotnet \
+    && sudo rm dotnet.tar.gz
     
 # Enable detection of running in a container
 ENV DOTNET_RUNNING_IN_CONTAINER=true \
