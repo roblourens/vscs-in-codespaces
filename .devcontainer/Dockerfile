@@ -1,10 +1,10 @@
 FROM mcr.microsoft.com/vscode/devcontainers/universal:linux
 
 # Install .NET Core SDK
-RUN sudo wget -q https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
-    && sudo chmod +x dotnet-install.sh \
-    && sudo ./dotnet-install.sh --version 3.1.402 \
-    && sudo rm dotnet-install.sh
+RUN wget -q https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh \
+    && chmod +x dotnet-install.sh \
+    && ./dotnet-install.sh --version 3.1.402 \
+    && rm dotnet-install.sh
 
 # Enable detection of running in a container
 ENV DOTNET_RUNNING_IN_CONTAINER=true \
