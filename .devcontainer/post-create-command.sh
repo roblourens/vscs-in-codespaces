@@ -2,7 +2,7 @@
 
 # when run in Linux, dotnet libraries
 # we use depend on "libcurl3" so install it
-apt-get install -y libcurl3
+sudo apt-get install -y libcurl3
 
 # go to extension workspace folder and
 # install all yarn dependencies
